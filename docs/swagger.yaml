@@ -1,0 +1,61 @@
+info:
+  contact: {}
+paths:
+  /code:
+    post:
+      parameters:
+      - description: 邮箱
+        in: formData
+        name: email
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        type: string
+      - description: token
+        in: formData
+        name: token
+        type: string
+      responses:
+        "200":
+          description: code","message"}
+          schema:
+            type: string
+      summary: 请求发送注册邮件
+      tags:
+      - 用户模块
+  /login:
+    post:
+      parameters:
+      - description: 邮箱
+        in: formData
+        name: email
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        type: string
+      responses:
+        "200":
+          description: code","message"}
+          schema:
+            type: string
+      summary: 用户登录
+      tags:
+      - 用户模块
+  /register:
+    get:
+      parameters:
+      - description: token
+        in: query
+        name: token
+        type: string
+      responses:
+        "200":
+          description: code","message"}
+          schema:
+            type: string
+      summary: 注册用户
+      tags:
+      - 用户模块
+swagger: "2.0"
